@@ -1,3 +1,4 @@
+#! /bin/bash
 cd /home/ec2-user/stupidscore/
 npm install
 cd /home/ec2-user/stupidscore/stupidscore-back
