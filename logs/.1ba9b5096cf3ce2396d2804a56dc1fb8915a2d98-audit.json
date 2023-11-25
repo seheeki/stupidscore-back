@@ -6,9 +6,9 @@
     "auditLog": "C:\\Users\\MZC01-SEHEE519\\git-stupidscore\\stupidscore-back\\stupidscore-back\\logs\\.1ba9b5096cf3ce2396d2804a56dc1fb8915a2d98-audit.json",
     "files": [
         {
-            "date": 1700913654939,
+            "date": 1700914664488,
             "name": "C:\\Users\\MZC01-SEHEE519\\git-stupidscore\\stupidscore-back\\stupidscore-back\\logs\\2023-11-25.exception.log",
-            "hash": "120b99a36525ed31d349092f124bffcd017e9c907c115de163efa9e1fd1a354e"
+            "hash": "15bbca759ceec9f97f50188f5ee714a3891cb9a8e30447778be4b74407cc32f9"
         }
     ],
     "hashType": "sha256"
