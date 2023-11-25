@@ -48,7 +48,7 @@ const logger = winston.createLogger({
          level: 'error', // error 레벨에선
          datePattern: 'YYYY-MM-DD',
          dirname: logDir + '/error', // /logs/error 하위에 저장
-         filename: `%DATE%.error.log`, // 에러 로그는 2020-05-28.error.log 형식으로 저장
+         filename: `${logDir}/error/errLog.log`, // 에러 로그는 2020-05-28.error.log 형식으로 저장
          maxFiles: 30,
          zippedArchive: true,
       }),
@@ -59,7 +59,7 @@ const logger = winston.createLogger({
          level: 'error',
          datePattern: 'YYYY-MM-DD',
          dirname: logDir,
-         filename: `%DATE%.exception.log`,
+         filename: `${logDir}/exception.log`, //`%DATE%.exception.log`,
          maxFiles: 30,
          zippedArchive: true,
       }),
