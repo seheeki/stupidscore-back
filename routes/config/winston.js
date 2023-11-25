@@ -5,7 +5,7 @@ const process = require('process');
 const { combine, timestamp, label, printf } = winston.format;
 
 //* 로그 파일 저장 경로 → 루트 경로/logs 폴더
-const logDir = '/home/ec2-user/stupidscore/stupidscore-back/logs';//`${process.cwd()}/logs`;
+const logDir =  '/home/ec2-user/stupidscore/stupidscore-back/logs'; //`${process.cwd()}/logs`;
 
 //* log 출력 포맷 정의 함수
 const logFormat = printf(({ level, message, label, timestamp }) => {
@@ -31,7 +31,7 @@ const logger = winston.createLogger({
          level: 'info', // info 레벨에선
          datePattern: 'YYYY-MM-DD', // 파일 날짜 형식
          dirname: logDir, // 파일 경로
-         filename: `%DATE%.log`, // 파일 이름
+         filename: `winstonDaily.log`, // 파일 이름
          maxFiles: 30, // 최근 30일치 로그 파일을 남김
          zippedArchive: true,
       }),
@@ -40,7 +40,7 @@ const logger = winston.createLogger({
          level: 'error', // error 레벨에선
          datePattern: 'YYYY-MM-DD',
          dirname: logDir + '/error', // /logs/error 하위에 저장
-         filename: `%DATE%.error.log`, // 에러 로그는 2020-05-28.error.log 형식으로 저장
+         filename: `winstonDaily.error.log`, // 에러 로그는 2020-05-28.error.log 형식으로 저장
          maxFiles: 30,
          zippedArchive: true,
       }),
@@ -51,7 +51,7 @@ const logger = winston.createLogger({
          level: 'error',
          datePattern: 'YYYY-MM-DD',
          dirname: logDir,
-         filename: `%DATE%.exception.log`,
+         filename: `winstonDaily.exception.log`,
          maxFiles: 30,
          zippedArchive: true,
       }),
