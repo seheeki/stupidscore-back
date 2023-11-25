@@ -22,7 +22,7 @@ let redisClient;
 (async () => {
   redisClient = redis.createClient({
     socket: {
-        host:  '127.0.0.1', //'test-redis-ro.8bidbg.ng.0001.apn2.cache.amazonaws.com', //'127.0.0.1', 
+        host:  'test-redis-ro.8bidbg.ng.0001.apn2.cache.amazonaws.com', //'127.0.0.1', 
         port:6379,
     }
   });
