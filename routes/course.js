@@ -48,10 +48,13 @@ async function getCourseData(req, res) {
             await redisClient.set(key, JSON.stringify(results));
         }
         //res.send(results);
-        res.send({
-            fronCache: isCached,
+
+        var coursedata = {
+            cache: isCached,
             data: results
-        });
+        };
+
+        res.send(coursedata);
     } catch (error) {
         console.error(error);
     }
