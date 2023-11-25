@@ -7,6 +7,8 @@ const connection = mysql.createConnection(dbconfig);
 const axios = require("axios");
 const redis = require("redis");
 
+const logger = require('./config/winston.js');
+
 function fetchDBData () {
     return new Promise((resolve, reject) => {
         connection.query('SELECT * from Courses', async (error, rows) => {
@@ -53,7 +55,7 @@ async function getCourseData(req, res) {
             cache: isCached,
             data: results
         };
-
+        logger.info('GET /course');
         res.send(coursedata);
     } catch (error) {
         console.error(error);
