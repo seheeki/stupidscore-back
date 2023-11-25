@@ -21,8 +21,10 @@ function fetchDBData () {
 let redisClient;
 (async () => {
   redisClient = redis.createClient({
-    host:  'test-redis-ro.8bidbg.ng.0001.apn2.cache.amazonaws.com', //'127.0.0.1', 
-    port:6379,
+    socket: {
+        host:  '127.0.0.1', //'test-redis-ro.8bidbg.ng.0001.apn2.cache.amazonaws.com', //'127.0.0.1', 
+        port:6379,
+    }
   });
 
   redisClient.on("error", (error) => console.error(`Error : ${error}`));
@@ -55,7 +57,7 @@ async function getCourseData(req, res) {
             cache: isCached,
             data: results
         };
-        //logger.info('GET /course');
+        logger.info('GET /course');
         res.send(coursedata);
     } catch (error) {
         console.error(error);

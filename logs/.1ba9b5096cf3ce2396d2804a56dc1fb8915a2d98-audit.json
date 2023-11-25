@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\MZC01-SEHEE519\\git-stupidscore\\stupidscore-back\\stupidscore-back\\logs\\.1ba9b5096cf3ce2396d2804a56dc1fb8915a2d98-audit.json",
+    "files": [
+        {
+            "date": 1700906972524,
+            "name": "C:\\Users\\MZC01-SEHEE519\\git-stupidscore\\stupidscore-back\\stupidscore-back\\logs\\2023-11-25.exception.log",
+            "hash": "cf9fcb6d44e0910fb319123cb52bafefef41960ecd7a708f4a2e92bbea6c43b0"
+        }
+    ],
+    "hashType": "sha256"
+}
