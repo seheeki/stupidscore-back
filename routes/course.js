@@ -55,7 +55,7 @@ async function getCourseData(req, res) {
             cache: isCached,
             data: results
         };
-        logger.info('GET /course');
+        //logger.info('GET /course');
         res.send(coursedata);
     } catch (error) {
         console.error(error);
