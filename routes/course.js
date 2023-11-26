@@ -21,10 +21,12 @@ function fetchDBData () {
 let redisClient;
 (async () => {
   redisClient = redis.createClient({
-    socket: {
-        host:  'prod-redis.8bidbg.clustercfg.apn2.cache.amazonaws.com', //'test-redis-ro.8bidbg.ng.0001.apn2.cache.amazonaws.com', //'127.0.0.1', 
-        port:6379,
-    }
+    rootNodes: [
+        {
+        url:  `redis://prod-redis.8bidbg.clustercfg.apn2.cache.amazonaws.com:6379`,
+        },
+    ],
+    useReplicas: true,
   });
 
   redisClient.on("error", (error) => console.error(`Error : ${error}`));
