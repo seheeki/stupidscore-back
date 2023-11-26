@@ -27,12 +27,10 @@ let redisClient;
     //    },
     //],
     //useReplicas: true,
-    redisClient = redis.createClient({
-        socket: {
-            host:  'prod-redis-ro.8bidbg.ng.0001.apn2.cache.amazonaws.com', //'127.0.0.1', 
-            port:6379,
-        }
-      });
+    socket: {
+        host:  'prod-redis-ro.8bidbg.ng.0001.apn2.cache.amazonaws.com', //'127.0.0.1', 
+        port:6379,
+    }
   });
 
   redisClient.on("error", (error) => console.error(`Error : ${error}`));
