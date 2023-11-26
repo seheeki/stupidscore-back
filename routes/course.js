@@ -28,7 +28,7 @@ let redisClient;
     //],
     //useReplicas: true,
     socket: {
-        host:  'prod-redis-ro.8bidbg.ng.0001.apn2.cache.amazonaws.com', //'127.0.0.1', 
+        host:  'prod-redis3-ro.8bidbg.ng.0001.apn2.cache.amazonaws.com', //'127.0.0.1', 
         port:6379,
     }
   });
