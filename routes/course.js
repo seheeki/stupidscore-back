@@ -20,7 +20,7 @@ function fetchDBData () {
 
 let redisClient;
 (async () => {
-  redisClient = redis.createClient({
+  redisClient = redis.createCluster({ //Client({
     rootNodes: [
         {
         url:  `redis://prod-redis.8bidbg.clustercfg.apn2.cache.amazonaws.com:6379`,
