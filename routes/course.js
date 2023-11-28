@@ -48,7 +48,8 @@ async function getCourseData(req, res) {
     try{
         const cacheResults = await redisClient.get(key);
         if(cacheResults){
-            console.log("is Cached");
+            console.log("is Cached 2");
+            logger.info('cached');
             isCached = true;
             results = JSON.parse(cacheResults);
         } else {
