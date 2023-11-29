@@ -65,7 +65,6 @@ async function getCourseData(req, res) {
             data: results
         };
         logger.info('GET /course');
-        redis
         res.send(coursedata);
     } catch (error) {
         console.error(error);
