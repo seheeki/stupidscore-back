@@ -23,7 +23,8 @@ let redisClient;
   redisClient = redis.createCluster({ //Client({
     rootNodes: [
         {
-        url:  `redis://prod-redis.8bidbg.clustercfg.apn2.cache.amazonaws.com:6379`,
+        url:  `redis://prod-redis2.8bidbg.clustercfg.apn2.cache.amazonaws.com:6379`,
+        //prod-redis.8bidbg.clustercfg.apn2.cache.amazonaws.com:6379`,
         },
     ],
     useReplicas: true,
