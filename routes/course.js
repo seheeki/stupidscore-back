@@ -21,14 +21,14 @@ function fetchDBData () {
 let redisClient;
 (async () => {
   redisClient = redis.createCluster({ //Client({
-    rootNodes: [
+    rootNodes: [ // multi 클러스터 구성 시
         {
-        url:  `redis://prod-redis2.8bidbg.clustercfg.apn2.cache.amazonaws.com:6379`,
+        url:  `redis://{redis_Domain}:6379`,
         //prod-redis.8bidbg.clustercfg.apn2.cache.amazonaws.com:6379`,
         },
     ],
     useReplicas: true,
-    //socket: {
+    //socket: { // 단일 서버 구성 시 
     //    host:  'prod-redis3-ro.8bidbg.ng.0001.apn2.cache.amazonaws.com', //'127.0.0.1', 
     //    port:6379,
     //}
