@@ -20,7 +20,7 @@ function fetchDBData () {
 
 let redisClient;
 (async () => {
-  redisClient = redis.createCluster({ //Client({
+  redisClient = redis.createCluster({ 
     rootNodes: [ // multi 클러스터 구성 시
         {
         url:  `redis://{redis_Domain}:6379`,
